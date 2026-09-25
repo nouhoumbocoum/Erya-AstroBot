@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Erya AstroBot — Explorez l'Univers</title>
+
+    <meta
+        name="description"
+        content="Erya AstroBot — Explorez l'Univers et comprenez ce que vous observez."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="space-background"></div>
+
+    <header class="navbar">
+
+        <a href="#" class="brand" aria-label="Erya AstroBot - Accueil">
+            <span class="brand-icon">🌌</span>
+            <span>Erya <strong>AstroBot</strong></span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+            <a href="#explorer">Explorer</a>
+            <a href="#copilote">Copilote IA</a>
+            <a href="#about">À propos</a>
+        </nav>
+
+        <div class="navbar-actions">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="mainMenu"
+            >
+                ☰
+                <span>Menu</span>
+            </button>
+        </div>
+
+        <div class="main-menu hidden" id="mainMenu">
+
+            <div class="menu-header">
+                <strong>Menu Erya</strong>
+
+                <button
+                    class="menu-close"
+                    id="menuClose"
+                    type="button"
+                    aria-label="Fermer le menu"
+                >
+                    ×
+                </button>
+            </div>
+
+            <nav class="menu-links" aria-label="Menu de l'application">
+                <a href="#explorer" class="menu-link">🔭 Explorer</a>
+                <a href="#copilote" class="menu-link">🤖 Copilote IA</a>
+                <a href="#about" class="menu-link">🌌 À propos</a>
+            </nav>
+
+            <div class="menu-divider"></div>
+
+            <div class="theme-area">
+                <span class="theme-title">🎨 Apparence</span>
+
+                <label for="themeSelect">Choisir un thème</label>
+
+                <select
+                    class="theme-select"
+                    id="themeSelect"
+                    aria-label="Choisir un thème"
+                >
+                    <option value="dark">🌙 Sombre</option>
+                    <option value="light">☀️ Clair</option>
+                    <option value="nebula">🌌 Nébuleuse</option>
+                    <option value="jwst">🔭 JWST</option>
+                </select>
+            </div>
+
+            <button class="menu-start-button" id="startButton" type="button">
+                Commencer l'exploration
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🔭 Exploration astronomique
+                </div>
+
+                <h1>
+                    Explorez l’Univers.<br>
+                    <span>Comprenez ce que vous observez.</span>
+                </h1>
+
+                <p>
+                    Erya AstroBot combine exploration astronomique,
+                    données spatiales et intelligence artificielle
+                    pour rendre l’Univers plus accessible.
+                </p>
+
+                <div class="hero-actions">
+                    <button
+                        class="primary-button"
+                        id="exploreButton"
+                        type="button"
+                    >
+                        🔭 Explorer le ciel
+                    </button>
+
+                    <button
+                        class="secondary-button"
+                        id="askButton"
+                        type="button"
+                    >
+                        🤖 Parler à Erya
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="hero-orbit">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="planet"></div>
+
+                <div class="orbit-label">
+                    <span>JWST</span>
+                    <small>James Webb Space Telescope</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="explorer">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">EXPLORATION</span>
+                    <h2>Explorez le cosmos</h2>
+                </div>
+
+                <p>
+                    Découvrez quelques-uns des objets que vous pourrez
+                    explorer avec Erya.
+                </p>
+            </div>
+
+            <div class="search-box">
+                <span>🔎</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Rechercher une galaxie, une étoile, une nébuleuse..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="object-grid" id="objectGrid">
+
+                <article
+                    class="object-card"
+                    data-name="nébuleuse d'orion orion nebuleuse"
+                >
+                    <div class="object-visual nebula">
+                        <span>✦</span>
+                    </div>
+
+                    <div class="object-content">
+                        <span class="object-type">NÉBULEUSE</span>
+
+                        <h3>Nébuleuse d'Orion</h3>
+
+                        <p>
+                            Une vaste région de formation stellaire
+                            située dans la constellation d'Orion.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                    class="object-card"
+                    data-name="galaxie andromede m31 andromède"
+                >
+                    <div class="object-visual galaxy">
+                        <span>✧</span>
+                    </div>
+
+                    <div class="object-content">
+                        <span class="object-type">GALAXIE</span>
+
+                        <h3>Andromède</h3>
+
+                        <p>
+                            Une grande galaxie spirale voisine de
+                            la Voie lactée.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                    class="object-card"
+                    data-name="piliers creation piliers de la création"
+                >
+                    <div class="object-visual pillars">
+                        <span>✺</span>
+                    </div>
+
+                    <div class="object-content">
+                        <span class="object-type">FORMATION STELLAIRE</span>
+
+                        <h3>Piliers de la Création</h3>
+
+                        <p>
+                            Une célèbre région de gaz et de poussière
+                            observée par les télescopes spatiaux.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="empty-state hidden" id="emptyState">
+                Aucun objet ne correspond à votre recherche.
+            </p>
+
+        </section>
+
+        <section class="ai-section" id="copilote">
+
+            <div class="ai-card">
+
+                <div class="ai-icon">
+                    🤖
+                </div>
+
+                <div class="ai-content">
+
+                    <span class="eyebrow">COPILOTE IA</span>
+
+                    <h2>
+                        Posez une question à Erya.
+                    </h2>
+
+                    <p>
+                        Erya aidera à expliquer les phénomènes astronomiques
+                        et les observations que vous explorez.
+                    </p>
+
+                    <div class="question-preview">
+                        <span>💬</span>
+
+                        <span>
+                            « Qu'est-ce que j'observe dans cette image ? »
+                        </span>
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        id="chatButton"
+                        type="button"
+                    >
+                        Ouvrir le copilote
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section about-section" id="about">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ERYA ASTROBOT</span>
+                    <h2>De la donnée à la compréhension</h2>
+                </div>
+            </div>
+
+            <div class="flow">
+
+                <div class="flow-item">
+                    <span>🌌</span>
+                    <strong>Données</strong>
+                    <p>
+                        Données astronomiques accessibles publiquement.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>🔭</span>
+                    <strong>Exploration</strong>
+                    <p>
+                        Observation et découverte d'objets célestes.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>🤖</span>
+                    <strong>IA</strong>
+                    <p>
+                        Explications adaptées aux questions de l'utilisateur.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>🧠</span>
+                    <strong>Compréhension</strong>
+                    <p>
+                        Transformer l'observation en apprentissage.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+            <strong>🌌 Erya AstroBot</strong>
+            <p>
+                Explorez l'Univers. Comprenez ce que vous observez.
+            </p>
+        </div>
+
+        <span>Hack Club Project · 2026</span>
+
+    </footer>
+
+    <div class="toast hidden" id="toast"></div>
+
+    <script src="src/app.js"></script>
+
+</body>
+</html>
